@@ -1,5 +1,6 @@
 # var name
 import inspect
+import math
 
 x, y, z = 1, 2, 3
 
@@ -12,22 +13,28 @@ print(retrieve_name(y))
 
 def NULL_not_found(object: any) -> int:
     print(type(object))
-    if isinstance(object, str):
-        print("string")
-    
+    #if isinstance(object, str):
+    #    print("string")
+    if object is None:
+        print(f"Nothing: None {type(object)}")
+    elif type(object) is float:
+        print(f"Chesse: nan {type(object)}")
+    return 0
 
+print(type(math.nan))
+print(math.nan)
 
-
-
-#from NULL_not_found import NULL_not_found
 Nothing = None
 Garlic = float("NaN")
+my_float = 0.1
 Zero = 0
 Empty = ""
 Fake = False
+print("test_01")
 NULL_not_found(Nothing)
 NULL_not_found(Garlic)
-NULL_not_found(Zero)
-NULL_not_found(Empty)
-NULL_not_found(Fake)
-print(NULL_not_found("Brian"))
+NULL_not_found(my_float)
+#NULL_not_found(Zero)
+#NULL_not_found(Empty)
+#NULL_not_found(Fake)
+#print(NULL_not_found("Brian"))
