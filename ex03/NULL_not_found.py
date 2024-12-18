@@ -8,14 +8,12 @@ def retrieve_name(var):
 
 print(retrieve_name(y))
 """
-import math
 
 def NULL_not_found(object: any) -> int:
     if object is None:
         print(f"Nothing: None {type(object)}")
-    elif type(object) is float:
-        if math.isnan(object):
-            print(f"Chesse: nan {type(object)}")
+    elif type(object) is float and str(object) == "nan":
+        print(f"Chesse: nan {type(object)}")
     elif object == "":
         print(f"Empty: {type(object)}")
     elif type(object) is bool and object is False:
